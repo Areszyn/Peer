@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { ToastContainer } from "react-toastify";
 import { ReduxProvider } from "@/redux/provider";
 
 import "react-toastify/dist/ReactToastify.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "P-to-P Video Chat",
@@ -21,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-primary`}>
+      <body className="bg-primary" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
         <ReduxProvider>{children}</ReduxProvider>
 
         <ToastContainer

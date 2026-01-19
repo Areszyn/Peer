@@ -29,7 +29,7 @@ export default function CallHistoryPage() {
     const fetchCallHistory = async () => {
       try {
         const response = await axios.get("/call/history");
-        setCalls(response.data.data || []);
+        setCalls(response.data.data?.calls || []);
       } catch (error) {
         console.error("Failed to fetch call history:", error);
         setCalls([]);

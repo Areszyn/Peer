@@ -34,9 +34,7 @@ export const getCallHistoryController = catchAsync(
         },
       });
 
-      sendResponse(res, 200, "success", "Call history retrieved successfully", {
-        calls,
-      });
+      sendResponse(res, 200, { calls });
     } catch (error: any) {
       return next(new AppError(500, error.message));
     }
