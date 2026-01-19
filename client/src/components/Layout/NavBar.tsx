@@ -15,12 +15,12 @@ const NavBar = () => {
       </div>
       <div>
         <ul className="flex gap-3 items-center">
-          {/* <li>
-            <Link href="/">Home</Link>
-          </li>
           <li>
             <Link href="/about">About</Link>
-          </li> */}
+          </li>
+          <li>
+            <Link href="/faq">FAQ</Link>
+          </li>
           {user.id == "" ? (
             <>
               <li className=" bg-primary  rounded-full px-3 py-1">
@@ -32,6 +32,12 @@ const NavBar = () => {
             </>
           ) : (
             <>
+              <li>
+                <Link href="/profile">Profile</Link>
+              </li>
+              <li>
+                <Link href="/history">History</Link>
+              </li>
               <li className=" bg-primary rounded-full px-3 py-1">
                 <button onClick={logout}>Logout</button>
               </li>

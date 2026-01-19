@@ -17,6 +17,7 @@ import environment from "./configs/environment.json";
 import { getUser } from "./services/user.services";
 
 import authRoutes from "./routes/auth.routes";
+import callRoutes from "./routes/call.routes";
 
 import {
   ServerToClientEvents,
@@ -67,6 +68,7 @@ app.use(
 
 // Routes:
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/call", callRoutes);
 
 app.get("/", (req, res, next) => {
   res.send("<h1>This is the server for peer to peer video communication</h1>");
