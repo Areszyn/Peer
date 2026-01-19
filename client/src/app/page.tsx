@@ -88,6 +88,12 @@ export default function Home() {
                 />
               </FormWrapper>
             </div>
+            <div className="text-sm text-gray-600 mt-4">
+              By using this service, you agree to our{" "}
+              <a href="/privacy" className="text-blue-600 hover:underline">
+                Privacy Policy
+              </a>
+            </div>
           </div>
         </div>
       </div>
