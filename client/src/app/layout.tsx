@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-primary" style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+      <body className="bg-primary font-sans">
         <ReduxProvider>{children}</ReduxProvider>
 
         <ToastContainer
